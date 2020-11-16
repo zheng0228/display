@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+    <script>
+        // const oFrag=document.//创建文档碎片
+        const oElement=document.createElement('ul')//创建元素
+        oElement.setAttribute('id',"lsBokks")
+        document.body.appendChild(oElement)
+        const oItem=document.createElement('li')
+        oItem.setAttribute('class','book')
+        oElement.appendChild(oItem)
+        const oText=document.createTextNode('java')
+        oItem.appendChild(oText)
+        
+        const oItem1=document.createElement('li')
+        oItem1.setAttribute('class','book')
+        oElement.appendChild(oItem1)
+        const oText1=document.createTextNode('python')
+        oItem1.appendChild(oText1)
+        const oItem2=document.createElement('li')
+        oItem2.setAttribute('class','book')
+        oElement.appendChild(oItem2)
+        const oText2=document.createTextNode('IOS')
+        oItem2.appendChild(oText2)
+        const oItem3=document.createElement('li')
+        oItem3.setAttribute('class','book')
+        oElement.appendChild(oItem3)
+        const oText3=document.createTextNode('javascript')
+        oItem3.appendChild(oText3)
+        // document.body.childElementCount
+    </script>
+</body>
+</html>

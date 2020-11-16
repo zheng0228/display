@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">
+        <p id="para">test</p>
+    </div>
+    <a href="http://www.microsoft.com">导航到微软公司</a>
+    <script>
+        const box=document.querySelector('#box')
+        const para=document.querySelector('#para')
+        const callback=(event)=>{
+            console.log(`标记名:${e.currentTarget.tagName},传播阶段:${e.eventphase}`)
+        }
+        box.addEventListener('click',callback,true)
+        para.addEventListener('click',callback,true)
+        box.addEventListener('click',callback,false)
+        para.addEventListener('click',callback,false)
+        const link=document.querySelector('#click')
+        link.addEventListener('click',(e)=>{
+            //阻止默认的行为（点击跳转到微软公司网站的行为）
+            if(e.cancelable){
+                e.preventDefault()
+            }
+            console.log(e.defaultPrevented)
+            console.log('you click link')
+        })
+        const txtName=document.querySelector('#txtName')
+        
+    </script>
+</body>
+</html>
