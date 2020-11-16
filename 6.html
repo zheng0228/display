@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>java</li>
+        <li>python</li>
+        <li>c++</li>
+        <li>php</li>
+    </ul>
+    <script>
+        const oList=document.querySelector('ul')
+        console.log(oList.parentNode)
+        console.log(oList.parentElement)//相对于安全一些，查找父节点的时候
+        //得到oList元素的子节点
+        console.log(oList.childNodes)//把ul前的空格也算成了子节点
+        console.log(oList.children)//只得到oList元素的子节点
+        //访问oList中的第一个元素，也就是java
+        console.log(oList.firstChild)//得出的结果是text，文本文档
+        console.log(oList.firstElementChild)
+        //访问最后一个元素
+        console.log(oList.lastElementChild)
+        //访问相邻的节点
+        console.log(oList.firstElementChild.nextElementSibling)
+        console.log(oList.lastElementChild.previousElementSibling)
+        //节点的数目
+        console.log(oList.childNodes.length)
+        console.log(oList.childElementCount)
+    </script>
+</body>
+</html>

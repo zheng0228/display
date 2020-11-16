@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let strHTML=`
+        <ul>
+        <li>java</li>
+        <li>python</li>
+        <li>c++</li>
+        <li>php</li>
+    </ul>`
+    //简单粗暴方式
+    document.body.innerHTML=strHTML
+    const oList=document.querySelector('ul')
+    console.log(oList.innerHTML)
+    //古老方式
+    const oFrag=document.createDocumentFragment()
+    const oElement=document.createElement('ul')
+    const createElement =(element,text) =>{
+        let oItem=document.createComment('li')
+        let oText=document.createTextNode('java')
+        oItem.appendChild(oText)
+        oElement.appendChild(oItem)
+    }
+    createElement('li','java')
+    createElement('li','python')
+    createElement('li','c++')
+    createElement('li','php')
+    oFrag.appendChild(oElement)
+    document.body.appendChild(oFrag)
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>访问内置（自带）属性</title>
+    <style>
+        .p1{
+            border: 1px solid red;
+        }
+        .p2{
+            background-color: royalblue;
+        }
+        .p3{
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        原生属性
+        <div id="" class=""  style=""></div>
+    <img src="" alt="">
+    <label for="userName">姓名：</label><input type="text" name="userName">
+    <script>
+        const oDiv=document.querySelector('div')
+        console.log(oDiv.id)
+        console.log(oDiv.className)
+        const oLabel=document.querySelector('label')
+        console.log(oLabel.htmlFor)
+        console.log(oDiv.style)
+    </script> -->
+
+    <!--ClassName
+     
+    -->
+<h1 class="p1 p2">this is a heading</h1>
+<button id='myButton'>Click</button>
+<script>
+    const heading=document.querySelector('h1')
+    const myButton=document.querySelector('#myButton')
+    //console.log(heading.className)
+    //heading.className +='p3'
+    //console.log(heading.className)
+    //classList
+    console.log(heading.classList)
+    heading.classList.add('p3')
+    heading.classList.remove('p2')
+    myButton.addEventListener('click',(){
+        oDiv1.classList
+    })
+</script>
+    //自定义属性(let,set可以访问自定义属性，也可以访问原生属性)
+    <div id="myDiv1" ddd="user" eee="name">test</div>
+    <script>
+        const oDiv1=document.querySelector('#myDiv1')
+        let ddd=oDiv1.getAttribute('ddd')
+        console.log(ddd)
+        oDiv1.setAttribute('eee','zhenghairong')//修改eee属性，下二行则是获取属性
+        let eee=oDiv1.getAttribute('eee')
+        console.log(eee)
+    </script>
+    <div id="myDiv2" data-username="zhenghairong" data-title=student></div>
+    <script>
+        const myDiv2=document.querySelector('#myDiv2')
+        console.log(myDiv2.dataset)
+        console.log(myDiv2.dataset.username)
+        myDiv2.dataset.title='zhengdada'
+        console.log(myDiv2.dataset.title)
+    </script>
+</body>
+</html>
