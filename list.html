@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="books">
+        <li>java</li>
+        <li>python</li>
+    </ul>
+    <input type="text" id="bookName"/>
+    <button id="btnAdd">增加</button>
+    <button id="btnDel">删除</button>
+    <input type="text" id="textItem"/>
+    <button id="btnadd">+</button>
+    <button id="btndel">-</button>
+    <script>
+        const books=document.querySelector("#books")
+        const bookName=document.querySelector("#bookName")
+        const btnAdd=document.querySelector("#btnAdd")
+        const btnDel=document.querySelector("#btnDel")
+        const books=document.querySelector("#books")
+        const bookName=document.querySelector("#bookname")
+        const btnAdd=document.querySelector("#btnadd")
+        const btnDel=document.querySelector("#btndel")
+        const addBooks=() => {
+            const oElement=document.createElement("li")//创建节点
+            const oText=document.createTextNode(bookName.Value)
+            oElement.appendChild(oText)
+            books.appendChild(oElement)
+            bookName.Value = ""
+        }
+        // const delBooks = () =>{
+        //     if(books.hasChildNodes){
+        //         books.removeChild(books.lastElementChild)
+        //     }
+        // }
+        const delBooks = () =>{
+            books.removeChild(books.lastElementChild)
+        }
+        btnAdd.addEventListener("click",addBooks)
+        btnDel.addEventListener('click',delBooks)
+    </script>
+</body>
+</html>

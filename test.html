@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #isBook .book{
+            border: 1px solid red;
+        }
+        #lsBooks :nth-child(3){
+            border: red;
+        }
+        #lsBook {
+            background-color: red;
+        }
+        #lsBook1 {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <!-- <button onclick="console.log('hello.js')"></button>
+    <script>
+    console.log('hello.js2')
+    </script>
+    <script src ='day06_01.js'></script>   //性能优化 -->
+   <!-- // ul#listBooks>li*4 可以快速创建4个列表 -->
+   <ul id ="lsBooks">
+       <li class="book">java</li>
+       <li>AI</li>
+   </ul>
+   <script>
+       /*
+       const oList =document.querySelector('#lsBooks')//返回元素的第一个节点
+       console.log(oList.innerHTML)
+       console.log(oList.nodeType)
+       console.log(oList.nodeName)
+       console.log(oList.nodeValue)
+       console.log(oList.firstChild.nodeType)//第一个元素子节点
+       console.log(oList.firstElementChild.nodeType)//寻找第一个元素节点，列表前的空格也算一个节点
+       console.log(document.doctype)//找到文档第一节点
+       console.log(document.doctype.nextSibling)//找到第一节点相邻的子节点
+       console.log(document.documentElement.nodeName)//可以访问了html标记了
+       console.log(document.body.nodeName)//可以访问了body标记了
+       console.log(document.doctype.nextSibling.firstElementChild.nextSibling.innerHTML)
+       const oList=document.getElementById('lsBooks')//可以通过id寻找定位该元素
+       //通过标记名获取元素
+       const oItem=document.getElementsByClassName('li')
+       console.log(oItem.length)
+       //通过类名获取元素
+       const oItem2=document.getElementsByClassName('book')//列表内容为<li class="book">java</li>
+       console.assert(oItem2.length)
+       oList.removeChild(oList.lastChild)//删除列表li里最后的一个节点
+       console.log(oItem.length) 
+       const oList=document.querySelector("#lsBooks .book")//最好寻找特定的元素方法
+       console.log(oList.innerHTML)//查找元素的文档内容
+       //通过查询选择器获取元素   
+       const oLists=document.querySelectorAll('#lsBook .book')
+       console.log(oLists.length)//2
+       console.log=document.querySelector("#lsBooks")
+       oList.removeChild(document.querySelector("#lsBooks :nth-child(3)"))
+       console.log(oLists.length)
+    */
+   const oLists=document.querySelector("#lsBooks")
+   console.log(oLists.getAttribute('id'))//获取元素的属性
+   oLists.setAttribute('id','lsBook1')
+   oLists.removeAttribute('id')//删除元素的之前的属性，并添加现有的属性
+   
+   </script>
+</body>
+</html>
